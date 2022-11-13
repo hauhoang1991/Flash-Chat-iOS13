@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Flash_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-Nm-K1g">
+                        <rect key="frame" x="10" y="10" width="377" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jr9-Q1-Hal">
+                                <rect key="frame" x="0.0" y="0.0" width="317" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz1-uT-ZSI">
+                                        <rect key="frame" x="10" y="10" width="297" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstItem="zz1-uT-ZSI" firstAttribute="top" secondItem="jr9-Q1-Hal" secondAttribute="top" constant="10" id="0cq-E5-lET"/>
+                                    <constraint firstAttribute="bottom" secondItem="zz1-uT-ZSI" secondAttribute="bottom" constant="10" id="DaZ-9n-ZuG"/>
+                                    <constraint firstAttribute="trailing" secondItem="zz1-uT-ZSI" secondAttribute="trailing" constant="10" id="edW-ay-VMC"/>
+                                    <constraint firstItem="zz1-uT-ZSI" firstAttribute="leading" secondItem="jr9-Q1-Hal" secondAttribute="leading" constant="10" id="fOG-4Z-NW8"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Qpo-2l-5Vs">
+                                <rect key="frame" x="337" y="0.0" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8zE-Pr-hZU"/>
+                                    <constraint firstAttribute="width" constant="40" id="u6N-qG-1Hr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="X3Z-Nm-K1g" secondAttribute="trailing" constant="10" id="JjV-fT-7r0"/>
+                    <constraint firstItem="X3Z-Nm-K1g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YHf-4q-1hk"/>
+                    <constraint firstItem="X3Z-Nm-K1g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mu2-C4-suc"/>
+                    <constraint firstAttribute="bottom" secondItem="X3Z-Nm-K1g" secondAttribute="bottom" constant="10" id="oOH-br-bbT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="zz1-uT-ZSI" id="rak-Kt-2ro"/>
+                <outlet property="messageBubble" destination="jr9-Q1-Hal" id="AAc-sI-GAX"/>
+                <outlet property="rightImageView" destination="Qpo-2l-5Vs" id="Zzf-xh-9Qq"/>
+            </connections>
+            <point key="canvasLocation" x="174.80916030534351" y="-61.971830985915496"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MeAvatar" width="36" height="36"/>
+        <namedColor name="BrandPurple">
+            <color red="1" green="0.57599997520446777" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
